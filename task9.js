@@ -31,7 +31,7 @@ function additem(e)
 
       
      itemlist.appendChild(li)
-}
+} 
 
 function removeitem(e)
 {
@@ -46,10 +46,10 @@ function filteritem(e)
 {
    var text = e.target.value.toLowerCase();
    var items = document.querySelector('li');
-
    Array.from(items).forEach(function(item)
    {
-     var  itemname = item.firstChild.TextContent;
+     var  itemname = item.firstChild.textContent;
+     console.log(itemname);
      if(itemname.toLowerCase().indexof(text) != -1)
      {
         item.style.display = 'block'
